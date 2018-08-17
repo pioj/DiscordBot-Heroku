@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.content === 'ping') {
     message.reply('pong');
-    channel.send('Y esa es mi respuesta.');
+   //channel.send('Y esa es mi respuesta.');
     }
 });
 
