@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.content === 'hola') {
     //message.reply('mao se ping!');
-    message.channel.send('Hola ${message.author} !' );
+    message.channel.send('Hola ${user} !' );
     }
 });
 
