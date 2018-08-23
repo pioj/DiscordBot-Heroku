@@ -23,7 +23,9 @@ client.on('message', message => {
       
       if (command ==='help') message.channel.send('Help: ' + args);
       if (command ==='dame') message.channel.send('Dame: ' + args);
-      if (command ==='busca') message.channel.send('Busca: ' + args);
+      
+      //buscador de cosas por internet
+      if (command ==='busca') message.channel.send('Busca: ' + 'https://lmgtfy.com/?q=' + args);
       
       //manual de Unity
       if (command ==='manual') message.channel.send('Manual: ' + 'https://docs.unity3d.com/ScriptReference/' + args + '.html');
