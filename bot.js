@@ -7,7 +7,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-client.on('message', async message => {
+client.on('message', message => {
   
   var action = 'null';
   
