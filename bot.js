@@ -14,10 +14,10 @@ client.on('message', message => {
   if (message.content.toLowerCase().includes('hola')) action ='salute';
   if (message.content.toLowerCase().includes('manubot')) action = 'other_order';
     
-  if (action === 'salute') message.channel.send('Hola ' + message.author.toString() + '!');
-  if (action === 'other_order') message.channel.send(message.content);
+  //if (action === 'salute') message.channel.send('Hola ' + message.author.toString() + '!');
+  //if (action === 'other_order') message.channel.send(message.content);
 
-  console.log('last action: ' +message.content);
+  //console.log('last action: ' +message.content);
 });
 
 
