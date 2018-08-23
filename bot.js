@@ -16,7 +16,16 @@ client.on('message', message => {
     if (message.content.toLowerCase().includes('manubot')) action = 'other_order';
     
     if (action === 'salute') message.channel.send('Hola ' + message.author.toString() + '!');
-    if (action === 'other_order') message.channel.send(message.content);
+    if (action === 'other_order') {
+      const target ='manubot';
+      const args = message.content.slice(target.length).trim().split(/ +/g);
+      const command = args.shift().toLowerCase();
+      
+      if (command ==='help') message.channel.send('Help: ' + args);
+      if (command ==='dame') message.channel.send('Dame: ' + args);
+      if (command ==='busca') message.channel.send('Busca: ' + args);
+      if (command ==='manual') message.channel.send('Manual: ' + args);
+    }
   
   }
   console.log('last action: ' + message.content);
