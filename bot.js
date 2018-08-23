@@ -3,31 +3,22 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const prefixes = 'manubot';
-const command_list = ['manual', 'help', 'busca', 'dame'];
-
-var args="";
-var command="";
-
 client.on('ready', () => {
   console.log('I am ready!');
 });
 
-client.on('message', message => {
+client.on('message', async message => {
   
-  var action = 'none';
+  var action = 'null';
   
-  if (message.content.toLowerCase().includes('hola')) {
-    action ='salute';
-  } else {
-    if (message.content.toLowerCase().includes(prefixes)) {
-        action = 'other_order';
-  }
-  
+  if (message.content.toLowerCase().includes('hola')) action ='salute';
+  if (message.content.toLowerCase().includes('manubot')) action = 'other_order';
+    
   if (action === 'salute') message.channel.send('Hola ' + message.author.toString() + '!');
-  if (action === 'other_order') message.channel.send(message.content);    
+  if (action === 'other_order') message.channel.send(message.content);
 
-  });
+  console.log('last action: ' +message.content);
+});
 
 
 //THIS MUST BE THIS WAY
