@@ -3,8 +3,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var prefixes = 'manubot';
-var command_list = ['manual', 'help', 'busca', 'dame'];
+const prefixes = 'manubot';
+const command_list = ['manual', 'help', 'busca', 'dame'];
 
 var args="";
 var command="";
@@ -25,22 +25,7 @@ client.on('message', message => {
   }
   
   if (action === 'salute') message.channel.send('Hola ' + message.author.toString() + '!');
-  if (action === 'other_order') {
-    args = message.content.slice(prefixes.length).trim().split(/ +/g);
-    command = args.shift().toLowerCase();
-    
-    for (int i=0; i < command_list.length; i++) {
-      if (command.includes(command_list[i])) {
-        action = command;
-        break;
-      }
-    }
-  }
-  
-  if (action === 'manual') message.channel.send('Manual' + args);
-  if (action === 'help') message.channel.send('Help' + args);
-  if (action === 'busca') message.channel.send('Busca' + args);
-  if (action === 'dame') message.channel.send('Dame' + args);
+  if (action === 'other_order') message.channel.send(message.content);    
 
   });
 
