@@ -1,6 +1,8 @@
 // NDc5OTY0NTYxNTIxNTA4MzYz.Dlg69Q.7gMhorvJPdwV_U_IU1GGEAqO124
 
 const Discord = require('discord.js');
+const snekfetch = require('snekfetch');
+
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -29,6 +31,12 @@ client.on('message', message => {
       
       //manual de Unity
       if (command ==='manual') message.channel.send('Manual: ' + 'https://docs.unity3d.com/ScriptReference/' + args + '.html');
+      
+      //dame es para sacar datos del API REST de UnitySpain
+      if (command ==='dame') {
+        //aqui va algo
+      }
+      
     }
   
   }
