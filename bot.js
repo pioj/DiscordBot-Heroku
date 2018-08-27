@@ -8,7 +8,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log('I am ready!');
 });
-
+ /*
 client.on('message', message => {
   
   var action = 'null';
@@ -42,7 +42,7 @@ client.on('message', message => {
   }
   console.log('last action: ' + message.content);
 });
-
+*/
 
 //THIS MUST BE THIS WAY
 client.login(process.env.BOT_TOKEN);
