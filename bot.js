@@ -1,7 +1,4 @@
-// NDc5OTY0NTYxNTIxNTA4MzYz.Dlg69Q.7gMhorvJPdwV_U_IU1GGEAqO124
-
 const Discord = require('discord.js');
-const snekfetch = require('snekfetch');
 
 const client = new Discord.Client();
 
